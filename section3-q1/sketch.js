@@ -17,10 +17,9 @@ function setup(){
 function balloon(t, x, y){
   let w = textWidth(t);
   let h = textAscent() + textDescent();
-  let p = x / 10;
   fill(x + 2, x + y + 88, x * 4 + 35);
   noStroke();
-  rect(x * 2, x * 2, w + p * p, h + p * p);
+  rect(x * 2, x * 2, w + x / 2, h + y - x + 15);
   fill(0);
-  text(t, p + 100, h + p + 100);
+  text(t, x + 55, h + x + y - 5);
 }
