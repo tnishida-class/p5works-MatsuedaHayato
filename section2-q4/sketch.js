@@ -1,21 +1,18 @@
-// ギリシャ国旗
+// タイ国旗
 function setup() {
-  const blue = color(0, 51, 160);
   createCanvas(270, 180);
-  // noStroke();
+   noStroke();
   background(255);
-
-  let d = height / 9; // 縞1本の太さ
-
-  for(let i = 0; i < 9; i++){
-    // BLANK[1] (hint: 縞の色を交互に変えるには2で割った余りを使おう)
-    rect(0, i * d, width, (i + 1) * d);
+  for(i = 0; i < 6; i++){
+    if(i == 2 || i == 3){
+      fill(22, 2, 156);
+    }
+    else if(i == 1 || i == 4){
+      fill(255);
+    }
+    else{
+      fill(235, 52, 52);
+    }
+    rect(0, 30 * i, 270, 30);
   }
-
-  fill(blue);
-  let size = d * 5;
-  rect(0, 0, size, size);
-
-  fill(255);
-  // BLANK[2] (hint: 白い十字を描くには rect を二つ描こう)
 }
