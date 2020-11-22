@@ -16,10 +16,14 @@ function setup() {
   maxR = min(width, height);
 
   drawCircle(black, maxR);
-  drawArcs(green, red, maxR * 0.8);
-  drawArcs(cream, black, maxR * 0.75);
-  drawArcs(green, red, maxR * 0.5);
-  drawArcs(cream, black, maxR * 0.45);
+  for(let i = 1; i < 5; i++){
+    if(i % 2 == 1){
+      drawArcs(green, red, maxR * (-0.15 * i + 0.95));
+    }
+    else{
+      drawArcs(cream, black, maxR * (-0.15 * i + 1.05));
+    }
+  }
   drawCircle(green, maxR * 0.1);
   // BLANK[1] (hint: drawArcs x 3, drawCircle x 1)
   drawCircle(red, maxR * 0.05);
